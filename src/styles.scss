@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #e5dddd;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.main-card-body {
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-content {
+  font-size: 16px;
+}
+
+.card-footer {
+  text-align: right;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+button {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white; /* White text */
+  padding: 15px 32px; /* Top and bottom padding, left and right padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker shade of green */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow effect on hover */
+}
+
