@@ -1,13 +1,21 @@
-import {Injectable, signal} from "@angular/core";
+import { Injectable, signal } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CounterService {
-  private internalCounter = signal(0);
-  public counter = this.internalCounter.asReadonly();
+  private internalCounterSignal = signal(0);
+  private internalCounterSubject = new BehaviorSubject<number>(0);
 
-  public increment(){
-    this.internalCounter.update(v => v + 1);
+  public counter = this.internalCounterSignal.asReadonly();
+  public counter$ = this.internalCounterSubject.asObservable();
+
+  public incrementSignal() {
+    this.internalCounterSignal.update((v) => v + 1);
+  }
+
+  public incrementObs() {
+    this.internalCounterSubject.next(this.internalCounterSubject.value + 1);
   }
 }
